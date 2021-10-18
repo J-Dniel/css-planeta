@@ -1,0 +1,148 @@
+body,html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background: -webkit-radial-gradient(#373888,
+                #214154,
+                #13242F);
+}
+
+h1{
+    color: white;
+}
+
+.tierra{
+    width: 200px;
+    height: 200px;
+    background: #3150ff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    margin: auto;
+    box-shadow: -30px -15px 0 0 rgba(0, 0, 0, .1) inset,
+                -70px -30px 0 0 rgba(0, 0, 0, .1) inset,
+                5px 5px 0 0 rgba(255, 255, 255, .15) inset;
+    background-image: url(../img/mapa.png);
+    background-size: cover;
+
+    animation: girar 10s infinite linear;
+
+}
+
+@keyframes girar {
+    from{
+        background-position: left center;
+    }
+
+    to{
+        background-position: -320px center;
+    }
+}
+
+.luna{
+    position:absolute;
+    top:27%;
+    right:58%;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:rgb(156, 156, 156);
+    box-shadow:0px 0px 100px #ffff00;
+    animation: lunar 5s infinite;
+}
+
+@keyframes lunar{
+    0%{
+        box-shadow: 0px 0px 100px #FFF;
+    }
+    50%{
+        box-shadow: 0px 0px 140px rgba(255, 255, 255, 0.5);
+    }
+    100%{
+        box-shadow: 0px 0px 100px rgba(255, 255, 255, 1);
+    }
+}
+
+.estrella{
+    width: 2px;
+    height: 2px;
+    top: 20%;
+    left: 50%;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+.estrella:nth-child(2){
+    top: 40%;
+    left: 20%;
+}
+.estrella:nth-child(3){
+    top: 10%;
+    left: 90%;
+}
+.estrella:nth-child(4){
+    top: 80%;
+    left: 20%;
+}
+.estrella:nth-child(5){
+    top: 70%;
+    left: 80%;
+}
+.estrella:nth-child(6){
+    top: 30%;
+    left: 80%;
+}
+.estrella:nth-child(7){
+    top: 35%;
+    left: 10%;
+}
+.estrella:nth-child(8){
+    top: 80%;
+    left: 50%;
+}
+.estrella:nth-child(9){
+    top: 55%;
+    left: 66%;
+}
+.estrella:nth-child(10){
+    top: 60%;
+    left: 20%;
+}
+
+.estrella:nth-child(2n){
+    animation: par 3s infinite;
+}
+.estrella:nth-child(2n+1){
+    animation: impar 5s infinite;
+}
+
+@keyframes par {
+    0%{
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255,.3);
+    }
+    50%{
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255,.3);
+    }
+    100%{
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255,.3);
+    }
+}
+@keyframes impar {
+    25%{
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255,.3);
+    }
+    75%{
+        box-shadow: 0 0 3px 3px rgba(255, 255, 255,.3);
+    }
+}
